@@ -69,4 +69,4 @@ AA0001/
   full/<task_id>.{mp4,srt}
 ```
 
-For each interval, subtitle cues outside the interval are removed, boundary-crossing cues are clipped, timestamps are shifted to start at `00:00:00,000`, and cue indices are regenerated. Video cutting uses FFmpeg stream copy with `-ss`, `-t`, `-c copy`, and `-avoid_negative_ts make_zero`.
+For each interval, subtitle cues outside the interval are removed, boundary-crossing cues are clipped, timestamps are shifted to start at `00:00:00,000`, and cue indices are regenerated. Video cutting uses accurate output-side seeking and H.264/AAC encoding. Re-encoding is intentional: stream-copy cuts can only start cleanly on keyframes and may otherwise include content before the requested start or omit content after it.
