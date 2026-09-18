@@ -15,6 +15,11 @@ data/
   README.md                  Data schema and temporal-coordinate documentation
 scripts/
   preprocess_media.py        Offline video/SRT preprocessing
+evaluation/
+  common.py                  Shared prompt and evaluation loop
+  run_api.py                 Universal API evaluation entry point
+  run_local.py               Universal local evaluation entry point
+  README.md                  Backend interface and usage
 ```
 
 The current release contains 470 source videos and 1,421 four-choice questions across five task types:
@@ -41,6 +46,10 @@ python scripts/preprocess_media.py AA0001 \
 The script performs no network access. It creates the event-level pre-trim video and the task-specific clip/full-video inputs, with matching SRT files whose timestamps are clipped and shifted to start at zero.
 
 See [data/README.md](data/README.md) for the public schema and exact timestamp semantics.
+
+## Evaluation
+
+The API and local-model runners use one shared prompt and evaluate every clip/full setting one question and one video at a time. Model-specific SDK calls are isolated in small backend adapters. See [evaluation/README.md](evaluation/README.md) for the interface and commands.
 
 ## Media Policy
 
