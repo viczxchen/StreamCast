@@ -11,7 +11,6 @@ data/
   metadata.json              Source identifiers and preprocessing timestamps
   sources.csv                Flat source metadata table
   benchmark_questions.json   Chinese and English benchmark questions
-  SHA256SUMS                 Data-file checksums
   README.md                  Data schema and temporal-coordinate documentation
 scripts/
   preprocess_media.py        Offline video/SRT preprocessing

@@ -2,7 +2,6 @@
 
 from __future__ import annotations
 
-import hashlib
 import json
 import random
 import re
@@ -203,8 +202,6 @@ def run_evaluation(
     if limit is not None:
         tasks = tasks[:limit]
     recorded_config = _public_config(backend_config)
-    questions_sha256 = hashlib.sha256(questions_path.read_bytes()).hexdigest()
-
     previous: dict[str, Any] = {}
     if output_path.is_file():
         previous = json.loads(output_path.read_text(encoding="utf-8"))
@@ -212,7 +209,6 @@ def run_evaluation(
             "backend_kind": backend_kind,
             "setting": setting,
             "shuffle_seed": seed,
-            "questions_sha256": questions_sha256,
         }
         mismatches = [key for key, value in expected.items() if previous.get(key) != value]
         previous_model = previous.get("backend_config", {}).get("model")
@@ -277,7 +273,6 @@ def run_evaluation(
             "backend_config": recorded_config,
             "setting": setting,
             "shuffle_seed": seed,
-            "questions_sha256": questions_sha256,
             "summary": _summary(ordered_rows, len(tasks)),
             "results": ordered_rows,
         }
@@ -291,7 +286,6 @@ def run_evaluation(
         "backend_config": recorded_config,
         "setting": setting,
         "shuffle_seed": seed,
-        "questions_sha256": questions_sha256,
         "summary": _summary(final_rows, len(tasks)),
         "results": final_rows,
     }

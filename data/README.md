@@ -7,7 +7,6 @@ This directory contains source metadata and the bilingual StreamCast evaluation 
 - `metadata.json`: source identifiers and event-level pre-trim coordinates for 470 videos.
 - `sources.csv`: a flat version of the main source and pre-trim fields.
 - `benchmark_questions.json`: 1,421 Chinese/English questions, answer choices, labels, and evaluation-video intervals.
-- `SHA256SUMS`: SHA-256 checksums for the three data files.
 
 ## Metadata
 
