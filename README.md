@@ -4,9 +4,14 @@ Official repository for *StreamCast: Benchmarking MLLMs for Future Prediction in
 
 This repository provides source metadata, bilingual benchmark questions, and offline preprocessing code. It does not redistribute videos or subtitles and does not provide media-downloading code. Users are responsible for obtaining source media in accordance with the source platform's terms and applicable law.
 
+See [DATA_CARD.md](DATA_CARD.md) for detailed documentation of source provenance,
+released and withheld artifacts, identity minimization, rights and licensing
+scope, evaluation inputs, link rot, and the takedown policy.
+
 ## Repository Structure
 
 ```text
+DATA_CARD.md                   Dataset documentation and release policy
 data/
   metadata.json              Source identifiers and preprocessing timestamps
   sources.csv                Flat source metadata table
