@@ -8,10 +8,20 @@ See [DATA_CARD.md](DATA_CARD.md) for detailed documentation of source provenance
 released and withheld artifacts, identity minimization, rights and licensing
 scope, evaluation inputs, link rot, and the takedown policy.
 
+## License
+
+The authored benchmark questions, metadata, and documentation are licensed
+under [CC BY 4.0](LICENSE-DATA). Source code is licensed under the
+[MIT License](LICENSE-CODE). These licenses do not apply to third-party source
+videos or subtitles, which are not redistributed by this repository.
+
 ## Repository Structure
 
 ```text
 DATA_CARD.md                   Dataset documentation and release policy
+CHANGELOG.md                   Versioned release and availability changes
+LICENSE-CODE                   MIT license for source code
+LICENSE-DATA                   CC BY 4.0 license for data and documentation
 data/
   metadata.json              Source identifiers and preprocessing timestamps
   sources.csv                Flat source metadata table

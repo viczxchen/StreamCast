@@ -1,9 +1,9 @@
 # StreamCast Data Card
 
 This Data Card documents the public artifacts accompanying *StreamCast:
-Benchmarking MLLMs for Future Prediction in Interactive Livestreams*. It should
-be read together with the repository README and the Ethics and Reproducibility
-Statements in the paper.
+Benchmarking MLLMs for Future Prediction in Interactive Livestreams*. It is
+intended to be read together with the repository README and the Ethics and
+Reproducibility Statements in the paper.
 
 StreamCast releases benchmark questions, source provenance, temporal
 coordinates, and evaluation code. It does not redistribute source videos,
@@ -84,17 +84,16 @@ those materials remain with their respective rights holders and may be subject
 to Bilibili's terms and, where applicable, the terms and rights associated with
 the original platform.
 
-Any license applied to this repository covers only the repository materials to
-which the authors can grant rights, such as authored questions, metadata,
-documentation, and code. It does not grant permission to download, reproduce,
-cache, or redistribute third-party videos or subtitles. Users must independently
-ensure that their access and processing comply with applicable platform terms,
-law, and rights-holder permissions.
+The authored benchmark questions, metadata, and documentation are released
+under the Creative Commons Attribution 4.0 International license (CC BY 4.0),
+as specified in `LICENSE-DATA`. The source code is released under the MIT
+License, as specified in `LICENSE-CODE`.
 
-**Release requirement:** explicit licenses for the authored data/documentation
-and code must be added as repository license files before the final public
-release. Until then, the repository should not imply that CC BY 4.0 or MIT has
-already been granted.
+These licenses cover only repository materials to which the authors can grant
+rights. They do not grant permission to download, reproduce, cache, or
+redistribute third-party videos or subtitles. Users must independently ensure
+that their access and processing comply with applicable platform terms, law,
+and rights-holder permissions.
 
 ## 6. Personal information and identity minimization
 
@@ -158,18 +157,18 @@ not guarantee continued access. If a source becomes unavailable, its questions
 remain useful for auditing benchmark structure but cannot be included in a valid
 multimodal evaluation without the corresponding media.
 
-Unavailable or retired sources should be recorded in a versioned availability
-manifest. Removing or replacing a source changes the evaluated item set;
-replacement items must therefore be introduced in a new benchmark version and
-must not be treated as identical to retired items. Reports should identify the
-benchmark version and unavailable-item policy used for scoring.
+Availability changes and retired sources are recorded in `CHANGELOG.md`.
+Removing or replacing a source changes the evaluated item set; replacement
+items are therefore introduced only in a new benchmark version and are not
+treated as identical to retired items. Reports should identify the benchmark
+version and unavailable-item policy used for scoring.
 
 ## 10. Takedown and correction policy
 
 Rights holders, depicted individuals, original creators, uploaders, or platform
 representatives may report a source for takedown or correction through the
-project repository's designated contact channel. During double-blind review,
-the public release and its contact mechanism must remain anonymous.
+repository issue tracker. During double-blind review, the anonymous repository
+issue tracker is the designated contact channel.
 
 After a request is reasonably validated, maintainers will remove the relevant
 source link and derived benchmark artifacts from subsequent public releases,
@@ -209,7 +208,6 @@ assess these risks before accessing linked media.
 ## 12. Maintenance
 
 The StreamCast author team maintains the benchmark. Availability changes,
-corrections, and retired items should be documented through versioned releases
-and a public change history. A stable, non-identifying contact mechanism should
-be listed in the anonymous review release and replaced with the long-term
-project contact in the de-anonymized release.
+corrections, and retired items are documented through versioned releases and
+`CHANGELOG.md`. The repository issue tracker is the public channel for reporting
+unavailable sources, requesting corrections, and submitting takedown requests.
