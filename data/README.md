@@ -13,7 +13,7 @@ This directory contains source metadata and the bilingual StreamCast evaluation 
 Each entry in `metadata.json` contains:
 
 - a stable sample ID and category;
-- public source identifiers, URL, selected part index, title, uploader, and reported duration;
+- public source identifiers, URL, selected part index, title, and reported duration;
 - the event-level pre-trim start and end timestamps used by the benchmark.
 
 The metadata is provided only to identify the public source and reproduce preprocessing. Availability of third-party pages may change over time.
